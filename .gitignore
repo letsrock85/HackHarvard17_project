@@ -1,0 +1,9 @@
+.DS_Store
+*.sw[mnop]
+
+# Logs
+logs
+*.log
+npm-debug.
+
+.node_modules
