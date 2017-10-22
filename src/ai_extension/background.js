@@ -75,7 +75,7 @@ function capture(tabId, dimensions) {
 function sendImage(imgUrl){
   var httpreq = new XMLHttpRequest();
   imgUrl = imgUrl.replace("data:image/png;base64,", "");
-  var params = 'img=' + imgUrl;//encodeURIComponent(imgUrl);
+  var params = 'img=' + encodeURIComponent(imgUrl);
   httpreq.open("get", "http://localhost:3000/img"+"?"+params, true);
 
   httpreq.onload = function () {
