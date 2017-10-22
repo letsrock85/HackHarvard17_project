@@ -6,4 +6,8 @@ logs
 *.log
 npm-debug.
 
-.node_modules
+node_modules
+.DS_Store
+.workspace
+.sublime-project
+.sublime-workspace

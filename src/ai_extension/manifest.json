@@ -1,0 +1,35 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "name": "A.I.",
+    "version": "0.0.1",
+    "manifest_version": 2,
+    "description": "",
+    "page_action": {
+        "default_icon": "icon48.png"
+    },
+    "permissions": [
+        "activeTab",
+        "tabs",
+        "http://*/*",
+        "https://*/*"
+    ],
+    "background": {
+        "scripts": ["background.js"]
+    },
+    "content_scripts": [{
+        "matches": ["http://*/*", "https://*/*"],
+        "js": ["annyeng.js", "contentscript.js"],
+        "run_at": "document_idle",
+        "all_frames": false,
+        "persistent": false
+    }],
+    "externally_connectable": {
+        "matches": ["*://*.facebook.com/*"]
+    },
+    "icons": {
+        "16": "icon16.png",
+        "48": "icon48.png",
+        "128": "icon128.png"
+    }
+}
