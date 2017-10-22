@@ -11,6 +11,7 @@
     "permissions": [
         "activeTab",
         "tabs",
+        "<all_urls>",
         "http://*/*",
         "https://*/*"
     ],
@@ -18,7 +19,7 @@
         "scripts": ["background.js"]
     },
     "content_scripts": [{
-        "matches": ["http://*/*", "https://*/*"],
+        "matches": ["<all_urls>", "http://*/*", "https://*/*"],
         "js": ["annyeng.js", "contentscript.js"],
         "run_at": "document_idle",
         "all_frames": false,

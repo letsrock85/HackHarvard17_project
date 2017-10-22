@@ -6,7 +6,7 @@
 
 // chrome.tabs.executeScript(tabs[0].id, {file:"annyeng.js"});
 chrome.runtime.sendMessage("cbcfmgddodbdldgcnkagddbijabnnima", {msg: "hello"}, function(response) {
-  console.log(response.farewell);
+  // console.log(response.farewell);
 });
 
 
@@ -47,6 +47,9 @@ function mousemove(e) {
     }
 }
 
+function onmouseup(){
+  toggleCommand('dislike');
+}
 function toggleCommand(hotword) {
     //end();
     dimensions.devicePixelRatio = window.devicePixelRatio;
@@ -77,6 +80,7 @@ function start() {
     if (!elminstector.parentNode) {
         document.body.appendChild(elminstector);
         document.body.addEventListener("mousemove", mousemove, false);
+        document.body.addEventListener("mouseup",onmouseup,false);
 
         //Stop whole thing by pressing esc!
         document.body.addEventListener("keyup", function(event){

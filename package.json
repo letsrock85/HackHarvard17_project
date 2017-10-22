@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "lite": "lite-server -c bs-config.json",
+    "lite": "lite-server -c configs/bs-config.json",
     "gulp": "gulp",
     "nodeapp": "node src/server-app/index.js",
     "dev": "npm-run-all -p gulp nodeapp lite",
@@ -30,8 +30,12 @@
   },
   "homepage": "https://github.com/letsrock85/HackHarvard17_project#readme",
   "dependencies": {
+    "body-parser": "^1.18.2",
+    "express": "^4.16.2",
     "gulp": "^3.9.1",
     "lite-server": "^2.3.0",
-    "npm-run-all": "^4.1.1"
+    "nconf": "^0.8.5",
+    "npm-run-all": "^4.1.1",
+    "path": "^0.12.7"
   }
 }
