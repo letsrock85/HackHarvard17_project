@@ -75,8 +75,9 @@ function capture(tabId, dimensions) {
 function sendImage(imgUrl){
   var httpreq = new XMLHttpRequest();
   imgUrl = imgUrl.replace("data:image/png;base64,", "");
-  var params = 'img=' + encodeURIComponent(imgUrl);
-  httpreq.open("get", "http://localhost:3000/img"+"?"+params, true);
+  // var params = 'img=' + encodeURIComponent(imgUrl);
+  var params = {img:imgUrl};
+  httpreq.open("post", "http://localhost:3000/img", true);
 
   httpreq.onload = function () {
     // do something to response
@@ -88,11 +89,11 @@ function sendImage(imgUrl){
 
   // httpreq.setRequestHeader("Content-Type", "text/plain");
   // httpreq.setRequestHeader("Content-Type", "charset=x-user-defined");
-  httpreq.setRequestHeader("X-Requested-With", "XMLHttpRequest");//get
+  // httpreq.setRequestHeader("X-Requested-With", "XMLHttpRequest");//get
   // httpreq.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded')
   // httpreq.responseType = "arraybuffer";
-  // httpreq.setRequestHeader("Content-Type", "application/json");
-  httpreq.send();
+  httpreq.setRequestHeader("Content-Type", "application/json");
+  httpreq.send(JSON.stringify(params));
   // httpreq.send(imgUrl);
   // httpreq.send(params);
   // httpreq.onreadystaechange = function () { if (this.readyState == 4) { console.log(this.responseText); } }

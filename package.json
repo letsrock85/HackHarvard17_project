@@ -30,6 +30,8 @@
   },
   "homepage": "https://github.com/letsrock85/HackHarvard17_project#readme",
   "dependencies": {
+    "async": "^2.5.0",
+    "base64-image-upload": "^1.1.4",
     "body-parser": "^1.18.2",
     "express": "^4.16.2",
     "file-system": "^2.2.2",
