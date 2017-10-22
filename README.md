@@ -27,6 +27,13 @@ Once the extension has been successfully loaded into your browser, navigate to f
 
 Now while scrolling your feed you can simply say "dislike it" and then the Hi-Oid will hide it, it will then learn the kinds of photos that you don't like. After using it more and more the artificial intellence will improve your browsering experience by removing any unpleasant posts. For the purpose of this demo, make sure the cursor is on the post or picture and then repeat the voice command.
 
+# DEMO!
+The link below shows a demo of our extension 'disliking' a post on facebook purely by voice. 
+Link: https://www.youtube.com/watch?v=oIzwo_4xmdE
+
+The more times the dislike feature is carried out, it shall train the neural network so in the future posts similar will automatically be 'disliked' 
+
+
 
 
 
