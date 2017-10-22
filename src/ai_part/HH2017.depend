@@ -1,0 +1,26 @@
+# depslib dependency file v1.0
+1508668699 source:c:\hh2017\net.cpp
+	<vector>
+	<iostream>
+	"net.hpp"
+
+1508666755 c:\hh2017\net.hpp
+	<vector>
+	<string>
+	<iostream>
+	<stdlib.h>
+	<stdio.h>
+	<unistd.h>
+	<cmath>
+	"netAlgorithm.hpp"
+
+1508639546 c:\hh2017\netalgorithm.hpp
+	<stdlib.h>
+	<ctime>
+
+1508639546 source:c:\hh2017\netalgorithm.cpp
+	<cmath>
+	<vector>
+	<stdlib.h>
+	<iostream>
+

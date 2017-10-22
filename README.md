@@ -15,16 +15,17 @@ To run locally
 3. Type "npm install" to install node packages   
 4. Type "npm run nodeapp" to start the server and app
 
-then you will have to install Chrome Extension locally.
-To do that, follow the instruction bellow:
+Then you will have to install Chrome Extension locally.
+To do that, follow the instructions bellow:
 1. Navigate to chrome://extensions
 2. Expand the Developer dropdown menu and click “Load Unpacked Extension”
-3. Navigate to the local folder containing the extension’s code and click Ok
+3. Navigate to the local folder containing the extension’s (src/ai_extension) code and click Ok
 4. Assuming there are no errors, the extension should load into your browser 
 
-after that navigate to facebook.com and click on a new ico "A.I." in the top right app drawer and then allows to use
-your micro to recognize your commands. 
-Now, by scrolling you feed wall you can say "i don't like it" and the A.I. will learn it + hide it from you page and then extension in connection with A.I. will improve your browsering experience by removing unpleasant stuff. 
+Once the extension has been successfully loaded into your browser, navigate to facebook.com, click on the extension icon 
+"Hi-Oid" in the top right app drawer and then click allow when the browser asks to use your microphone so it can listen to voice commands. 
+
+Now while scrolling your feed you can simply say "i do not like it" and then the Hi-Oid will hide it, it will then learn the kinds of photos that you don't like. After using it more and more the artificial intellence will improve your browsering experience by removing any unpleasant posts. For the purpose of this demo, make sure the cursor is on the post or picture and then repeat the voice command.
 
 
 

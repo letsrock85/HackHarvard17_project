@@ -21,22 +21,17 @@ app.post('/img', function (req, res) {
 
   // res.send(req.respons);
   console.log(req.body.img);
-  //Execute A.I.
-  // exec('HelloJithin.exe', function(err, data) {
-  //       console.log(err)
-  //       console.log(data.toString());
-  //   });
 
   async.waterfall([
   // A list of functions
     function(callback){
         // Function no. 1 in sequence
-        setTimeout(function(){console.log("iam 1000")}, 1000);
+        setTimeout(function(){console.log("run_hi_oid_AI")}, 1000);
         callback(null);
     },
     function(callback){
         // Function no. 2 in sequence
-        setTimeout(function(){console.log("iam 2000")}, 2000);
+        setTimeout(function(){console.log("startReadBin")}, 2000);
         callback(null);
     }
   ],
@@ -84,6 +79,15 @@ function startReadBin(){
       file = fs.readFileSync(filePath, 'utf8');
       console.log('File content at : ' + new Date() + ' is \n' + file);
   });
+}
+
+function run_hi_oid_AI(){
+  //Execute A.I.
+  exec('src/ai_part/Hi-Oid.exe', function(err, data) {
+        console.log(err)
+        console.log(data.toString());
+    });
+
 }
 
 
