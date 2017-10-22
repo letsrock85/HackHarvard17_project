@@ -57,15 +57,13 @@ function capture(tabId, dimensions) {
                 var croppedDataUrl = canvas.toDataURL("image/png");
                 sendImage(croppedDataUrl);
 
-                setTimeout(function() {
-                  chrome.tabs.create({
-                      url: croppedDataUrl,
-                      windowId: tab.windowId
-                  });
-
-                }, 2000);
-
-
+                // setTimeout(function() {
+                //   chrome.tabs.create({
+                //       url: croppedDataUrl,
+                //       windowId: tab.windowId
+                //   });
+                //
+                // }, 2000);
             }
             image.src = dataUrl;
         });
@@ -75,7 +73,6 @@ function capture(tabId, dimensions) {
 function sendImage(imgUrl){
   var httpreq = new XMLHttpRequest();
   imgUrl = imgUrl.replace("data:image/png;base64,", "");
-  // var params = 'img=' + encodeURIComponent(imgUrl);
   var params = {img:imgUrl};
   httpreq.open("post", "http://localhost:3000/img", true);
 
@@ -83,18 +80,8 @@ function sendImage(imgUrl){
     // do something to response
     // console.log(JSON.parse(this.body));
     console.log(this);
-    // console.log(imgUrl);
   };
-  // httpreq.overrideMimeType("text/plain; charset=x-user-defined");
 
-  // httpreq.setRequestHeader("Content-Type", "text/plain");
-  // httpreq.setRequestHeader("Content-Type", "charset=x-user-defined");
-  // httpreq.setRequestHeader("X-Requested-With", "XMLHttpRequest");//get
-  // httpreq.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded')
-  // httpreq.responseType = "arraybuffer";
   httpreq.setRequestHeader("Content-Type", "application/json");
   httpreq.send(JSON.stringify(params));
-  // httpreq.send(imgUrl);
-  // httpreq.send(params);
-  // httpreq.onreadystaechange = function () { if (this.readyState == 4) { console.log(this.responseText); } }
 }

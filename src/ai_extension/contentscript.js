@@ -48,7 +48,7 @@ function mousemove(e) {
 }
 
 function onmouseup(){
-  toggleCommand('dislike');
+  // toggleCommand('dislike');
 }
 function toggleCommand(hotword) {
     //end();
@@ -84,7 +84,7 @@ function start() {
 
         //Stop whole thing by pressing esc!
         document.body.addEventListener("keyup", function(event){
-            if (event.keyCode == 27) end();
+            if (event.keyCode == 27){} end();
         }, false);
     }
 }
@@ -104,6 +104,7 @@ function setupAnnyang(){
   annyang.start({ autoRestart: true, continuous: true });
 }
 function end() {
+    annyang.stop();
     document.body.removeChild(elminstector);
     document.body.removeEventListener("mousemove", mousemove, false);
 }
