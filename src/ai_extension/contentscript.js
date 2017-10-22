@@ -49,6 +49,7 @@ function mousemove(e) {
 
 function onmouseup(){
   // toggleCommand('dislike');
+  return null;
 }
 function toggleCommand(hotword) {
     //end();
@@ -90,10 +91,10 @@ function start() {
 }
 function setupAnnyang(){
   var commands = {
-    'do not like it':
+    'dislike':
     function() {
         //start();
-        toggleCommand('dislike');
+        toggleCommand('dislike it');
         console.log('test!');
      }
   };
@@ -104,7 +105,7 @@ function setupAnnyang(){
   annyang.start({ autoRestart: true, continuous: true });
 }
 function end() {
-    annyang.stop();
+    annyang.abort();
     document.body.removeChild(elminstector);
     document.body.removeEventListener("mousemove", mousemove, false);
 }
